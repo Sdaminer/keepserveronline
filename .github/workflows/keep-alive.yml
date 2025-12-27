@@ -10,9 +10,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Ping Minecraft server
-        run: |
-          echo "Pinging Minecraft server..."
-          timeout 10 bash -c "</dev/tcp/digitalbananasserver.aternos.me/34702" || true
-          workflow_dispatch:
+    - name: Ping Minecraft server
+  run: |
+    echo "Pinging Minecraft server..."
+    nc -z -w 5 digitalbananasserver.aternos.me 34702 || true
+
 
