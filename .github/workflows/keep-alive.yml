@@ -14,3 +14,5 @@ jobs:
         run: |
           echo "Pinging Minecraft server..."
           timeout 10 bash -c "</dev/tcp/digitalbananasserver.aternos.me/34702" || true
+          workflow_dispatch:
+
