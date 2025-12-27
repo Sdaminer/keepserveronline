@@ -2,7 +2,7 @@ name: Keep Minecraft Server Alive
 
 on:
   schedule:
-    - cron: "*/5 * * * *"   # every 5 minutes
+    - cron: "*/10 * * * *"
   workflow_dispatch:
 
 jobs:
@@ -10,9 +10,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Ping Minecraft server
-  run: |
-    echo "Pinging Minecraft server..."
-    nc -z -w 5 digitalbananasserver.aternos.me 34702 || true
+      - name: Ping Minecraft server
+        run: |
+          echo "Pinging Minecraft server..."
+          nc -z -w 5 digitalbananasserver.aternos.me 34702 || true
 
 
